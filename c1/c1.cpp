@@ -14,5 +14,18 @@ int main() {
     cout << endl << endl << ": ";
     cin >> guess;
 
+    while (guess != randomNumber) {
+        if (guess > randomNumber) {
+            cout << "Lower" << endl << endl << ": ";
+            cin >> guess;
+        }
+        else if (guess < randomNumber) {
+            cout << "Higher" << endl << endl << ": ";
+            cin >> guess;
+        }
+
+    }
+    cout << "You guessed correctly! You won't be so lucky next time..." << endl;
+
     return 0;
 }
