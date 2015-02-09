@@ -7,11 +7,16 @@ class Hand
     public:
         Hand();
         virtual ~Hand();
+
         void setState(int);
-        unsigned short getState() const;
+        unsigned short getState();
+        void addWin();
+        unsigned short getWin();
+
     protected:
     private:
         unsigned short state;
+        unsigned short wins;
 };
 
 #endif // HAND_H

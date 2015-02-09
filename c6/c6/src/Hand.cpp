@@ -25,3 +25,15 @@ void Hand::setState(int handState) {
             break;
     }
 }
+
+unsigned short Hand::getState() {
+    return state;
+}
+
+void Hand::addWin() {
+    wins++;
+}
+
+unsigned short Hand::getWin() {
+    return wins;
+}
