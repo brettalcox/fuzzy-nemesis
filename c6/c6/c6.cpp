@@ -25,43 +25,43 @@ int main() {
         //User choosing Rock
 
         if ((userPlayer.getState() == 1) && (computerPlayer.getState() == 1)) {
-            cout << "Tie!" << endl;
+            cout << endl << "Tie!" << endl;
         }
         else if ((userPlayer.getState() == 1) && (computerPlayer.getState() == 2)) {
-            cout << "Paper beats rock!" << endl;
+            cout << endl << "Paper beats rock!" << endl;
             computerPlayer.addWin();
         }
         else if ((userPlayer.getState() == 1) && (computerPlayer.getState() == 3)) {
-            cout << "Rock beats scissors!" << endl;
+            cout << endl << "Rock beats scissors!" << endl;
             userPlayer.addWin();
         }
 
         //User choosing Paper
 
         if ((userPlayer.getState() == 2) && (computerPlayer.getState() == 1)) {
-            cout << "Paper beats rock!" << endl;
+            cout << endl << "Paper beats rock!" << endl;
             userPlayer.addWin();
         }
         else if ((userPlayer.getState() == 2) && (computerPlayer.getState() == 2)) {
-            cout << "Tie!" << endl;
+            cout << endl << "Tie!" << endl;
         }
         else if ((userPlayer.getState() == 2) && (computerPlayer.getState() == 3)) {
-            cout << "Scissors beat paper!" << endl;
+            cout << endl << "Scissors beat paper!" << endl;
             computerPlayer.addWin();
         }
 
         //User choosing scissors
 
          if ((userPlayer.getState() == 3) && (computerPlayer.getState() == 1)) {
-            cout << "Rock beats scissor!" << endl;
+            cout << endl << "Rock beats scissor!" << endl;
             computerPlayer.addWin();
         }
         else if ((userPlayer.getState() == 3) && (computerPlayer.getState() == 2)) {
-            cout << "Scissors beat paper!" << endl;
+            cout << endl << "Scissors beat paper!" << endl;
             userPlayer.addWin();
         }
         else if ((userPlayer.getState() == 3) && (computerPlayer.getState() == 3)) {
-            cout << "Tie!" << endl;
+            cout << endl << "Tie!" << endl;
         }
 
         if ((userPlayer.getWin() >= 3) && (userPlayer.getWin() > computerPlayer.getWin())) {
