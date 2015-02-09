@@ -1,4 +1,5 @@
 #include "Hangman.h"
+#include <iostream>
 
 Hangman::Hangman()
 {
@@ -11,5 +12,5 @@ Hangman::~Hangman()
 }
 
 void Hangman::createHangman() {
-
+    std::cout << "_______" << std::endl << "   |   " << std::endl;
 }
