@@ -5,27 +5,22 @@ using namespace std;
 int main() {
     string inputString;
     int lengthOfString;
-    string * encryptArray;
+    string encryptArray[1000];
 
     int startSlice = 0;
-    int endSlice = 1;
+    int endSlice = 2;
 
     cout << "Please enter a string..." << endl << endl << ": ";
     getline(cin, inputString);
     lengthOfString = inputString.length();
     lengthOfString = (lengthOfString / 2) + 1;
-    encryptArray = new string[lengthOfString];
-    //string butt = "fart";
-    //encryptArray[0] = butt;
-    //cout << encryptArray[0];
 
-    for (int i = lengthOfString - 1; i > 0; i--) {
-        encryptArray[i] = inputString.substr(1, 2);
+    for (int i = lengthOfString; i > 0; i--) {
+        encryptArray[i] = inputString.substr(startSlice, endSlice);
         startSlice += 2;
-        endSlice += 2;
     }
 
-    for (int i = 0; i > lengthOfString; i++) {
+    for (int i = 0; i < lengthOfString + 1; i++) {
         cout << encryptArray[i];
     }
 
