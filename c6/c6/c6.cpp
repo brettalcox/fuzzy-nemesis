@@ -64,7 +64,13 @@ int main() {
             cout << "Tie!" << endl;
         }
 
-
+        if ((userPlayer.getWin() >= 3) && (userPlayer.getWin() > computerPlayer.getWin())) {
+            wonTheGame = true;
+            cout << "You win!" << endl;
+        } else if ((computerPlayer.getWin() >= 3) && (computerPlayer.getWin() > userPlayer.getWin())) {
+            wonTheGame = true;
+            cout << "Computer wins! You lose!" << endl;
+        } else;
 
     } while (!wonTheGame);
     return 0;

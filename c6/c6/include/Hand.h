@@ -16,7 +16,7 @@ class Hand
     protected:
     private:
         unsigned short state;
-        unsigned short wins;
+        unsigned short wins = 0;
 };
 
 #endif // HAND_H
