@@ -12,6 +12,7 @@ int main()
     game.createHangman();
     words.openFile();
     word = words.selectWord();
+    words.returnWordLength();
 
     cout << word << endl;
 

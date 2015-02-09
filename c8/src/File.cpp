@@ -34,7 +34,14 @@ string File::selectWord() {
     int selection;
     sizeOfList = WordArray.size();
     selection = rand() % sizeOfList + 1;
+
+    wordLength = WordArray[selection].length();
+
     return WordArray[selection];
 
 
+}
+
+int File::returnWordLength() {
+    return wordLength;
 }
