@@ -12,7 +12,11 @@ int main()
     game.createHangman();
     words.openFile();
     word = words.selectWord();
-
+    vector<string> HashedWordVector = words.getHashedVector();
+    cout << endl << endl << endl;
+    for (int i = 0; i < words.returnWordLength(); i++) {
+        cout << HashedWordVector[i];
+    }
 
 
 
