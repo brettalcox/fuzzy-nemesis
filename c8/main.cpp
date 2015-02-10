@@ -30,6 +30,12 @@ int main()
         for (int i = 0; i < words.returnWordLength(); i++) {
             cout << HashedWordVector[i];
         }
+
+        cout << endl << endl << "Used Letters: ";
+        for (int i = 0; i < words.getUsedLetterVector().size(); i++) {
+            cout << words.getUsedLetterVector()[i] << " ";
+        }
+
         cout << endl << endl << ": ";
         getline(cin, guess);
 
@@ -41,13 +47,22 @@ int main()
         }
 
         if (!guessCorrect) {
+            words.setUsedLetter(guess);
+        }
+
+        if (!guessCorrect) {
             hangmanBodyPart++;
         }
         guessCorrect = false;
     } while (hangmanBodyPart != 7);
 
     game.addToHangman(7);
-    cout << endl << "Game Over! You suck!!" << endl;
+    cout << endl << "Game Over! You suck!! ";
+    cout << "The word was ";
+    for (int i = 0; i < words.returnWordLength(); i++) {
+        cout << words.getStringVector()[i];
+    }
+    cout << endl;
 
     return 0;
 }

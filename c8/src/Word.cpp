@@ -53,3 +53,11 @@ vector<string> Word::getStringVector() {
 vector<string> Word::getHashedVector() {
     return HashedWord;
 }
+
+void Word::setUsedLetter(string letter) {
+    UsedLetters.push_back(letter);
+}
+
+vector<string> Word::getUsedLetterVector() {
+    return UsedLetters;
+}

@@ -15,11 +15,14 @@ class Word
         int returnWordLength();
         vector<string> getStringVector();
         vector<string> getHashedVector();
+        void setUsedLetter(string);
+        vector<string> getUsedLetterVector();
     protected:
     private:
         vector<string> WordArray;
         vector<string> SelectedWord;
         vector<string> HashedWord;
+        vector<string> UsedLetters;
         int wordLength;
         void stringToVector(string);
 };
