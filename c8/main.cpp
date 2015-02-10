@@ -10,16 +10,23 @@ int main()
     File words;
     string word;
 
-    game.createHangman();
+    int hangmanBodyPart = 0;
+    string guess;
+
     words.openFile();
     word = words.selectWord();
     vector<string> HashedWordVector = words.getHashedVector();
-    cout << endl << endl << endl << "Guess: ";
-    for (int i = 0; i < words.returnWordLength(); i++) {
-        cout << HashedWordVector[i];
-    }
 
+    do {
+        game.addToHangman(hangmanBodyPart);
+        cout << endl << endl << endl << "Guess: ";
+        for (int i = 0; i < words.returnWordLength(); i++) {
+            cout << HashedWordVector[i];
+        }
+        cout << endl << endl << ": ";
+        cin >> guess;
 
+    } while (hangmanBodyPart != 7);
 
     return 0;
 }

@@ -7,7 +7,6 @@ class Hangman
     public:
         Hangman();
         virtual ~Hangman();
-        void createHangman();
         void addToHangman(int);
     protected:
     private:
