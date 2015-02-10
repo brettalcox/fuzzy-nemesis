@@ -12,17 +12,11 @@ class File
         File();
         virtual ~File();
         void openFile();
-        string selectWord();
-        int returnWordLength();
-        vector<string> getStringVector();
-        vector<string> getHashedVector();
+        vector<string> getWordArray();
+
     protected:
     private:
         vector<string> WordArray;
-        vector<string> SelectedWord;
-        vector<string> HashedWord;
-        int wordLength;
-        void stringToVector(string);
 };
 
 #endif // FILE_H

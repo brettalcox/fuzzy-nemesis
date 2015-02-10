@@ -1,19 +1,25 @@
 #include <iostream>
 #include <Hangman.h>
 #include <File.h>
+#include <Word.h>
 #include <string>
 
 int main()
 {
     cout << "HANGMAN" << endl;
+
     Hangman game;
-    File words;
+    Word words;
+    File wordsFile;
+
     string word;
     int hangmanBodyPart = 0;
     string guess;
     bool guessCorrect = false;
 
-    words.openFile();
+    wordsFile.openFile();
+    words.setWordArray(wordsFile.getWordArray());
+
     word = words.selectWord();
     vector<string> HashedWordVector = words.getHashedVector();
     vector<string> StringVector = words.getStringVector();
@@ -39,6 +45,9 @@ int main()
         }
         guessCorrect = false;
     } while (hangmanBodyPart != 7);
+
+    game.addToHangman(7);
+    cout << endl << "Game Over! You suck!!" << endl;
 
     return 0;
 }
