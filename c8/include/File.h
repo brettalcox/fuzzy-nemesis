@@ -14,10 +14,13 @@ class File
         void openFile();
         string selectWord();
         int returnWordLength();
+        vector<string> getStringVector();
     protected:
     private:
         vector<string> WordArray;
+        vector<string> SelectedWord;
         int wordLength;
+        void stringToVector(string);
 };
 
 #endif // FILE_H

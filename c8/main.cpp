@@ -14,7 +14,7 @@ int main()
     word = words.selectWord();
     words.returnWordLength();
 
-    cout << word << endl;
+
 
     return 0;
 }

@@ -36,12 +36,22 @@ string File::selectWord() {
     selection = rand() % sizeOfList + 1;
 
     wordLength = WordArray[selection].length();
-
+    stringToVector(WordArray[selection]);
     return WordArray[selection];
-
-
 }
 
 int File::returnWordLength() {
     return wordLength;
+}
+
+void File::stringToVector(string word) {
+    int startSlice = 0;
+    for (int i = 0; i < wordLength; i++) {
+        SelectedWord.push_back(word.substr(startSlice, 1));
+        startSlice++;
+    }
+}
+
+vector<string> File::getStringVector() {
+    return SelectedWord;
 }
