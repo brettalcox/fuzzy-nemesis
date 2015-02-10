@@ -15,10 +15,12 @@ class File
         string selectWord();
         int returnWordLength();
         vector<string> getStringVector();
+        vector<string> getHashedVector();
     protected:
     private:
         vector<string> WordArray;
         vector<string> SelectedWord;
+        vector<string> HashedWord;
         int wordLength;
         void stringToVector(string);
 };

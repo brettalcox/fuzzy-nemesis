@@ -50,8 +50,15 @@ void File::stringToVector(string word) {
         SelectedWord.push_back(word.substr(startSlice, 1));
         startSlice++;
     }
+    for (int i = 0; i < returnWordLength(); i++) {
+        HashedWord.push_back("-");
+    }
 }
 
 vector<string> File::getStringVector() {
     return SelectedWord;
+}
+
+vector<string> File::getHashedVector() {
+    return HashedWord;
 }
