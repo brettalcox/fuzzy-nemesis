@@ -9,13 +9,14 @@ int main()
     Hangman game;
     File words;
     string word;
-
     int hangmanBodyPart = 0;
     string guess;
+    bool guessCorrect = false;
 
     words.openFile();
     word = words.selectWord();
     vector<string> HashedWordVector = words.getHashedVector();
+    vector<string> StringVector = words.getStringVector();
 
     do {
         game.addToHangman(hangmanBodyPart);
@@ -24,8 +25,19 @@ int main()
             cout << HashedWordVector[i];
         }
         cout << endl << endl << ": ";
-        cin >> guess;
+        getline(cin, guess);
 
+        for (int i = 0; i < words.returnWordLength(); i++) {
+            if (guess == StringVector[i]) {
+                HashedWordVector[i] = StringVector[i];
+                guessCorrect = true;
+            } else;
+        }
+
+        if (!guessCorrect) {
+            hangmanBodyPart++;
+        }
+        guessCorrect = false;
     } while (hangmanBodyPart != 7);
 
     return 0;
