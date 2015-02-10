@@ -8,8 +8,10 @@ class Hangman
         Hangman();
         virtual ~Hangman();
         void createHangman();
+        void addToHangman(int);
     protected:
     private:
+
 };
 
 #endif // HANGMAN_H
