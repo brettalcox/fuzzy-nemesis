@@ -16,6 +16,7 @@ int main()
     int hangmanBodyPart = 0;
     string guess;
     bool guessCorrect = false;
+    bool gameWon = false;
 
     wordsFile.openFile();
     words.setWordArray(wordsFile.getWordArray());
@@ -48,19 +49,38 @@ int main()
 
         if (!guessCorrect) {
             words.setUsedLetter(guess);
-        }
-
-        if (!guessCorrect) {
             hangmanBodyPart++;
         }
-        guessCorrect = false;
-    } while (hangmanBodyPart != 7);
 
-    game.addToHangman(7);
-    cout << endl << "Game Over! You suck!! ";
-    cout << "The word was ";
-    for (int i = 0; i < words.returnWordLength(); i++) {
-        cout << words.getStringVector()[i];
+        if (StringVector == HashedWordVector) {
+            //cout << endl << "You guessed correctly!" << endl;
+            gameWon = true;
+            game.addToHangman(hangmanBodyPart);
+            cout << endl << endl << endl << "Guess: ";
+            for (int i = 0; i < words.returnWordLength(); i++) {
+            cout << words.getStringVector()[i];
+            }
+            cout << endl << endl << "You guessed correctly!" << endl;
+
+        }
+
+        if (hangmanBodyPart == 7) {
+            break;
+        }
+
+        guessCorrect = false;
+    } while (!gameWon);
+
+    if (hangmanBodyPart == 7) {
+        game.addToHangman(7);
+        cout << endl << "Game Over! You suck!! ";
+        cout << "The word was ";
+        for (int i = 0; i < words.returnWordLength(); i++) {
+            cout << words.getStringVector()[i];
+        }
+    } else if (hangmanBodyPart != 7) {
+        //cout << endl << "You guessed correctly!" << endl;
+
     }
     cout << endl;
 
