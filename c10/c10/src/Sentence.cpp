@@ -1,6 +1,7 @@
 #include "Sentence.h"
+#include <vector>
 
-Sentence::Sentence()
+Sentence::Sentence(vector<string> articles, vector<string> nouns, vector<string> verbs, vector<string> prepositions)
 {
     //ctor
 }

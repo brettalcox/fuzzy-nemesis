@@ -1,9 +1,11 @@
 #include <iostream>
+#include "Sentence.h"
+#include "OpenFile.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    OpenFile open;
+    open.openFiles();
 }
