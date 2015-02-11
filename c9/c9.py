@@ -11,9 +11,12 @@ def count_dict(loveString):
 	return d
 	
 def main():
-	loveString = raw_input("Please type a string.\n")
+	userString = raw_input("Enter your name: ")
+	loveString = raw_input("Enter your love's name: ")
+	finalString = userString + "loves" + loveString
+	
 	d = {}
-	d = count_dict(loveString)
+	d = count_dict(finalString)
 	
 	while True:
 		begin = 0;
@@ -45,12 +48,14 @@ def main():
 						addDict[i] = round(addDict[i] / 2)
 		print (addDict)
 		
-		if (len(d) <= 3):
+		if (len(d) <= 2):
 			break
 		else:
 			d = addDict
-			
-	
+	final = addDict[0] * 10
+	print(userString + " loving " + loveString + " has a "),
+	print(final),
+	print( "% chance of working!")
 	
 	return 0
 
