@@ -15,27 +15,42 @@ def main():
 	d = {}
 	d = count_dict(loveString)
 	
-	
-	begin = 0;
-	end = -1;
-	addDict = {}
-	lengthOfD = len(d) 
-	if (lengthOfD % 2 == 0):
-		for i in range(0, lengthOfD / 2):
-			addDict[i] = d[d.keys()[begin]] + d[d.keys()[end]]
-			begin += 1 
-			end -= 1
-	else:
-		for i in range(0, (lengthOfD / 2) + 1):
-			if (begin == (len(d) / 2)):
-				addDict[i] = d[d.keys()[begin]]
-			else:
+	while True:
+		begin = 0;
+		end = -1;
+		addDict = {}
+		lengthOfD = len(d) 
+		if (lengthOfD % 2 == 0):
+			for i in range(0, lengthOfD / 2):
 				addDict[i] = d[d.keys()[begin]] + d[d.keys()[end]]
 				begin += 1 
 				end -= 1
 				
+				if (addDict[i] > 9):
+					addDict[i] = round(addDict[i] / 2)
+
+		else:
+			for i in range(0, (lengthOfD / 2) + 1):
+				if (begin == (len(d) / 2)):
+					addDict[i] = d[d.keys()[begin]]
+					
+					if (addDict[i] > 9):
+						addDict[i] = round(addDict[i] / 2)
+				else:
+					addDict[i] = d[d.keys()[begin]] + d[d.keys()[end]]
+					begin += 1 
+					end -= 1
+					
+					if (addDict[i] > 9):
+						addDict[i] = round(addDict[i] / 2)
+		print (addDict)
+		
+		if (len(d) <= 3):
+			break
+		else:
+			d = addDict
 			
-	print (addDict)
+	
 	
 	return 0
 
