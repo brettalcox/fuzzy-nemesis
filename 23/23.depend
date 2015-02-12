@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1423749260 source:/home/brettalcox/Code/Programming Challenge/23/main.cpp
+	<cstdlib>
+	<cstring>
+	<iostream>
+	<curl/curl.h>
+	<string>
+
