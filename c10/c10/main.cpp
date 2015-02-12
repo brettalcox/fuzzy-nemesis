@@ -17,8 +17,5 @@ int main()
     preposition = randomSentence.selectRandomWord(open.getPrepositions());
     sentence = article + " " + noun + " " + verb + " " + preposition;
     cout << sentence << endl << endl;
-    cout << noun << endl;
-    cout << verb << endl;
-    cout << preposition;
 
 }
