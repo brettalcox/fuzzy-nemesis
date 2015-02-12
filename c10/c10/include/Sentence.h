@@ -8,8 +8,9 @@ using namespace std;
 class Sentence
 {
     public:
-        Sentence(vector<string>, vector<string>, vector<string>, vector<string>);
+        Sentence();
         virtual ~Sentence();
+        string selectRandomWord(vector<string>);
     protected:
     private:
 };

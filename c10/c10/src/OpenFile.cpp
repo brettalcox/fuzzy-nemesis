@@ -27,7 +27,7 @@ ifstream inputFile;
     }
     inputFile.close();
 
-    inputFile.open("2syllableverbs.txt");
+    inputFile.open("verb.txt");
     while (!inputFile.eof()) {
             getline(inputFile, dummy);
             verbs.push_back(dummy);
@@ -41,4 +41,16 @@ ifstream inputFile;
     }
     inputFile.close();
 
+
+    inputFile.open("article.txt");
+    while (!inputFile.eof()) {
+            getline(inputFile, dummy);
+            articles.push_back(dummy);
+    }
+    inputFile.close();
 }
+
+vector<string> OpenFile::getArticles() { return articles; }
+vector<string> OpenFile::getNouns() { return nouns; }
+vector<string> OpenFile::getVerbs() { return verbs; }
+vector<string> OpenFile::getPrepositions() { return prepositions; }
