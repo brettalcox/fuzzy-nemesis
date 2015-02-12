@@ -53,6 +53,7 @@ int main() {
 
     }
     delete [] chanUrl;
+    delete [] outputFile;
 
 
     return 0;
