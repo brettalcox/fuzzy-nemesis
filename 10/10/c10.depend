@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1423701219 source:/home/brettalcox/Code/Programming Challenge/c10/c10/main.cpp
+	<iostream>
+	"Sentence.h"
+	"OpenFile.h"
+
+1423701097 source:/home/brettalcox/Code/Programming Challenge/c10/c10/src/Sentence.cpp
+	"Sentence.h"
+	<vector>
+	<time.h>
+	<cstdlib>
+
+1423699682 /home/brettalcox/Code/Programming Challenge/c10/c10/include/Sentence.h
+	<vector>
+	<string>
+
+1423700901 source:/home/brettalcox/Code/Programming Challenge/c10/c10/src/OpenFile.cpp
+	"OpenFile.h"
+	<iostream>
+	<fstream>
+	<cstdlib>
+
+1423697307 /home/brettalcox/Code/Programming Challenge/c10/c10/include/OpenFile.h
+	<vector>
+	<string>
+
