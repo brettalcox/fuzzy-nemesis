@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1423560832 source:/home/brettalcox/Code/Programming Challenge/c8/main.cpp
+	<iostream>
+	<Hangman.h>
+	<File.h>
+	<Word.h>
+	<string>
+
+1423529642 /home/brettalcox/Code/Programming Challenge/c8/include/Hangman.h
+
+1423529673 source:/home/brettalcox/Code/Programming Challenge/c8/src/Hangman.cpp
+	"Hangman.h"
+	<iostream>
+	<iomanip>
+
+1423531651 source:/home/brettalcox/Code/Programming Challenge/c8/src/File.cpp
+	"File.h"
+	<iostream>
+	<fstream>
+	<time.h>
+	<cstdlib>
+
+1423531651 /home/brettalcox/Code/Programming Challenge/c8/include/File.h
+	<iostream>
+	<vector>
+	<string>
+
+1423535194 source:/home/brettalcox/Code/Programming Challenge/c8/src/Word.cpp
+	"Word.h"
+	<iostream>
+	<fstream>
+	<time.h>
+	<cstdlib>
+
+1423535218 /home/brettalcox/Code/Programming Challenge/c8/include/Word.h
+	<string>
+	<vector>
+

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1423502183 source:/home/brettalcox/Code/Programming Challenge/c6/c6/c6.cpp
+	<iostream>
+	<time.h>
+	<cstdlib>
+	"Hand.h"
+
+1423501891 /home/brettalcox/Code/Programming Challenge/c6/c6/include/Hand.h
+
+1423500428 source:/home/brettalcox/Code/Programming Challenge/c6/c6/src/Hand.cpp
+	"Hand.h"
+
