@@ -1,4 +1,5 @@
 #include "GenRandom.h"
+#include <fstream>
 
 GenRandom::GenRandom()
 {
@@ -58,18 +59,21 @@ char GenRandom::getSymbol() {
 
 void GenRandom::randomType(int selection) {
 
+    fstream outputFile;
+    outputFile.open("passwords.txt", ios::out | ios::app);
+
     switch (selection) {
         case 1:
-            cout << getAlphaUpper();
+            outputFile << getAlphaUpper();
             break;
         case 2:
-            cout << getAlphaLower();
+            outputFile << getAlphaLower();
             break;
         case 3:
-            cout << getNumber();
+            outputFile << getNumber();
             break;
         case 4:
-            cout << getSymbol();
+            outputFile << getSymbol();
             break;
     }
 }

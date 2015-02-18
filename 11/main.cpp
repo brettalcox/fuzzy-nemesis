@@ -3,6 +3,7 @@
 #include <string>
 #include <time.h>
 #include "GenRandom.h"
+#include <fstream>
 
 using namespace std;
 
@@ -20,9 +21,14 @@ int main()
 
     cout << endl << endl << "Password: ";
 
-    for (int i = 0; i < passwordLength + 1; i++) {
-        selection = rand() % 4 + 1;
-        password.randomType(selection);
+    fstream outputFile;
+    outputFile.open("passwords.txt", ios::out | ios::app);
+    for (int i = 0; i < 1000001; i++) {
+        for (int i = 0; i < passwordLength + 1; i++) {
+            selection = rand() % 4 + 1;
+            password.randomType(selection);
+        }
+        outputFile << endl;
     }
 
     cout << endl << endl;
