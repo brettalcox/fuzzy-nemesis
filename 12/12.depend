@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1424306207 source:/home/brettalcox/Code/Programming Challenge/12/main.cpp
+	<stdio.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<time.h>
+	<string.h>
+	<iostream>
+
